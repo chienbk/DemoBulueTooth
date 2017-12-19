@@ -1,11 +1,13 @@
 package com.example.chienbk.connectbluetoothdemo.views;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.example.chienbk.connectbluetoothdemo.MainActivity;
 import com.example.chienbk.connectbluetoothdemo.R;
 import com.example.chienbk.connectbluetoothdemo.adapter.ViewPagerAdapter;
 import com.example.chienbk.connectbluetoothdemo.fragment.ErrorCodeFragment;
@@ -38,5 +40,12 @@ public class HomeActivity extends AppCompatActivity {
         adapter.addFragment(new StatusFragment(), "Status");
         adapter.addFragment(new ErrorCodeFragment(), "Error Code");
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(HomeActivity.this, MainActivity.class));
+        finish();
     }
 }
