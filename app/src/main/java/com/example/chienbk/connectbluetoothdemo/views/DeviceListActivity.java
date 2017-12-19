@@ -219,9 +219,11 @@ public class DeviceListActivity extends AppCompatActivity {
             Bundle b = new Bundle();
             b.putString(BluetoothDevice.EXTRA_DEVICE, deviceList.get(position).getAddress());
 
-            Intent result = new Intent();
+            /*Intent result = new Intent();
             result.putExtras(b);
             setResult(Activity.RESULT_OK, result);
+            finish();*/
+            startActivity(new Intent(DeviceListActivity.this, HomeActivity.class));
             finish();
 
         }

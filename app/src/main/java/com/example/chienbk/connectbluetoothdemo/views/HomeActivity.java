@@ -1,11 +1,11 @@
 package com.example.chienbk.connectbluetoothdemo.views;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 
 import com.example.chienbk.connectbluetoothdemo.MainActivity;
 import com.example.chienbk.connectbluetoothdemo.R;
@@ -23,6 +23,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra(BluetoothDevice.EXTRA_DEVICE);
+
         setTitle("Demo Bluetooth");
         initViews();
     }

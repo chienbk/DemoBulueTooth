@@ -117,9 +117,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
                         //Connect button pressed, open DeviceListActivity class, with popup windows that scan for devices
 
-                        Intent newIntent = new Intent(MainActivity.this, HomeActivity.class);
-                        startActivity(newIntent);
-                        //startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
+                        Intent newIntent = new Intent(MainActivity.this, DeviceListActivity.class);
+                        //startActivity(newIntent);
+                        startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
                     } else {
                         //Disconnect button pressed
                         if (mDevice!=null) {
