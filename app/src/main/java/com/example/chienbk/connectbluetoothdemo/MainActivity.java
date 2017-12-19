@@ -32,6 +32,7 @@ import android.widget.Toast;
 
 import com.example.chienbk.connectbluetoothdemo.service.BluetoothService;
 import com.example.chienbk.connectbluetoothdemo.views.DeviceListActivity;
+import com.example.chienbk.connectbluetoothdemo.views.HomeActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
@@ -47,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private static final int UART_PROFILE_DISCONNECTED = 21;
     private static final int STATE_OFF = 10;
 
-    TextView mRemoteRssiVal;
-    RadioGroup mRg;
+    /*TextView mRemoteRssiVal;
+    RadioGroup mRg;*/
     private int mState = UART_PROFILE_DISCONNECTED;
     private BluetoothService mService = null;
     private BluetoothDevice mDevice = null;
@@ -116,8 +117,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
                         //Connect button pressed, open DeviceListActivity class, with popup windows that scan for devices
 
-                        Intent newIntent = new Intent(MainActivity.this, DeviceListActivity.class);
-                        startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
+                        Intent newIntent = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(newIntent);
+                        //startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
                     } else {
                         //Disconnect button pressed
                         if (mDevice!=null) {

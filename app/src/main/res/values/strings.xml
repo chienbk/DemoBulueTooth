@@ -46,4 +46,8 @@
     <string name="ble_not_supported">Bluetooth Low Energy not supported</string>
     <string name="scan">Scan</string>
     <string name="cancel">Cancel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_status">Hello blank fragment status</string>
+    <string name="hello_blank_fragment_error_code">Hello blank fragment error code</string>
 </resources>
